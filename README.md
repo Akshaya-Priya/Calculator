@@ -2,4 +2,6 @@
 Technical tools used:
 * HTML
 * CSS
-* JavaScript 
+* JavaScript
+
+This Calculator has a responsive design
