@@ -5,4 +5,3 @@ Technical tools used:
 * JavaScript
 
 This Calculator has a responsive design
-Adding something nonsence to check revert in git 
