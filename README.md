@@ -7,4 +7,3 @@ Technical tools used:
 This Calculator has a responsive design
 Adding something nonsence to check revert in git 
 make some changes 
-more changes
