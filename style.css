@@ -1,94 +1,115 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: "Roboto Mono", monospace;
-  }
-  body {
-    height: 100vh;
-    background-color: #dadff7;
-  }
-  .calculator {
-    width: 400px;
-    background-color: #241204;
-    padding: 50px 30px 20px 30px;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%;
-    border-radius: 8px;
-    box-shadow: 0 20px 50px rgba(0, 5, 24, 0.4);
-  }
-  
-  input[type="text"]{
-    padding: 20px 30px; 
-    font-size: 24px; 
-    width: 100%;
-    padding: 15px 10px; 
-    text-align: right;
-    background-color: #e88e8e;
-    color: #000000;
-    border:2px solid #6b5633;
-    font-size: 35px;
-    border-radius: 7px;
-  }
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Mono", monospace;
+}
 
-  input[type="button"] {
-     display: grid;
-    grid-template-columns: repeat(4, 1fr); 
-    grid-gap: 5px;
-    margin-top: 5px; 
+body {
+  height: 100vh;
+  background: linear-gradient(145deg, #eb9ce1, #c765b3); /* Dark gradient background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-    border:2px solid #6b5633;
-    font-size: 20px;
-    
-    
-    /* background-color: #f69906; */
-    color: #ffffff;
-    cursor: pointer;
-    
-    border-color:#6b5633;
+.calculator {
+  width: 400px;
+  background-color: #2a1e3b;
+  padding: 50px 30px 20px 30px;
+  border-radius: 25px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4); /* Darker shadow */
+}
 
-    /* border-radius: 10px; */
-  }
-  
-  .equal,.clear {
-    margin:auto;
-    padding: 15px 30px;
-    border-radius:15px;
-    background-color: #f9544c; 
-    box-shadow: 10px 5px 5px  #a60901 inset;
-  }
-  .equal:hover,.clear:hover{
-    background-color: #840802;
-  }
-  
-  .operation-button,.dot {
-    padding: 15px 30px;
-    border-radius: 50%;
-    background-color:#813589;
-    box-shadow: 10px 5px 5px #411a45 inset;
-  }
-  
-  .operation-button:hover,.dot:hover {
-    background-color: #4b0853;
-  }
-  
-  .digit-button {
-    padding: 15px 30px;
-    border-radius: 50%;
-    box-shadow: 10px 5px 5px  #4d0a30  inset;
-    background-color: #f02196;
-  }
-  
-  .digit-button:hover {
-    background-color:  #82034b;
-  }
-  td{
-    text-align:center;
-    vertical-align: middle;
-  }
-  
+input[type="text"] {
+  padding: 20px 30px;
+  font-size: 24px;
+  width: 100%;
+  padding: 15px 10px;
+  text-align: right;
+  background: linear-gradient(145deg, #a99dce, #8475c1); /* Darker gradient for display */
+  color: #ffffff;
+  border: 2px solid #6b5b9b;
+  font-size: 35px;
+  border-radius: 12px;
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.2); /* Stronger inset effect */
+}
 
+input[type="button"] {
+  width: 100%;
+  margin-top: 10px; /* Increased margin for spacing between buttons */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 15px; /* Increased gap between buttons */
+}
 
+/* Styling for digit buttons (0-9) */
+.digit-button {
+  padding: 20px;
+  border: none;
+  font-size: 20px;
+  border-radius: 20px;
+  background: linear-gradient(145deg, #e099ff, #b167d4); /* Purple gradient for digit buttons */
+  color: #ffffff;
+  cursor: pointer;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+  transition: all 0.3s ease-in-out;
+}
 
+.digit-button:hover {
+  background: linear-gradient(145deg, #b167d4, #e099ff); /* Hover effect for digits */
+  transform: translateY(-3px);
+}
+
+/* Styling for operator buttons (+, -, *, /) */
+.operation-button {
+  padding: 20px;
+  border-radius: 20px;
+  background: linear-gradient(145deg, #ffbe76, #f39c12); /* Orange gradient for operators */
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.operation-button:hover {
+  background: linear-gradient(145deg, #f39c12, #ffbe76);
+}
+
+/* Styling for Clear and Equals buttons */
+.clear, .equal {
+  padding: 20px;
+  border-radius: 20px;
+  background: linear-gradient(145deg, #ff6b6b, #c0392b); /* Red gradient for Clear and Equals */
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.clear:hover, .equal:hover {
+  background: linear-gradient(145deg, #c0392b, #ff6b6b);
+}
+
+.clear {
+  grid-column: span 2; /* Make Clear button span 2 columns */
+}
+
+.equal {
+  grid-column: span 2; /* Make Equals button span 2 columns */
+}
+
+.dot {
+  padding: 20px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #dff9fb, #74b9ff); /* Light blue gradient for dot button */
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+  color: #000000;
+}
+
+.dot:hover {
+  background: linear-gradient(145deg, #74b9ff, #dff9fb);
+}
+
+td {
+  text-align: center;
+  vertical-align: middle;
+}
